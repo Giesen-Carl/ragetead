@@ -19,14 +19,14 @@ public class Player extends Creature {
   private final List<Spell> spells;
 
   public Player(int maxHealth, double poise, double speed, double precision,
-      List<DamageMod> damageMods, List<Status> statuses, int level, int exp, int mana,
+      List<DamageMod> damageMods, List<Status> statuses, int level,
       int maxMana, Weapon weapon, Armor armor, List<Item> inventory,
       List<Spell> spells) {
     super(maxHealth, poise, speed, precision, damageMods, statuses);
     this.level = level;
-    this.exp = exp;
-    this.mana = mana;
     this.maxMana = maxMana;
+    this.exp = 0;
+    this.mana = maxMana;
     this.weapon = weapon;
     this.armor = armor;
     this.inventory = inventory;

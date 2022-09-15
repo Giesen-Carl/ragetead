@@ -9,6 +9,7 @@ public class Enemy extends Creature {
   private final int threatLevel;
   private final List<Item> loot;
   private final String description;
+  private boolean alive;
 
   public Enemy(int maxHealth, double poise, double speed, double precision,
       List<DamageMod> damageMods, List<Status> statuses, int threatLevel,
@@ -17,6 +18,11 @@ public class Enemy extends Creature {
     this.threatLevel = threatLevel;
     this.loot = loot;
     this.description = description;
+    this.alive = true;
+  }
+
+  public void kill() {
+    alive = false;
   }
 
   public int getThreatLevel() {
