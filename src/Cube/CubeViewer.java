@@ -11,12 +11,13 @@ import javax.swing.WindowConstants;
 
 public class CubeViewer extends JPanel {
 
-  private Cube cube;
+  private final Cube cube;
   private final int size = 30;
 
-  public CubeViewer() {
+  public CubeViewer(Cube cube) {
     this.setPreferredSize(new Dimension(18*size, 15*size));
     this.setBackground(new Color(196, 246, 237, 255));
+    this.cube = cube;
 
     JFrame frame = new JFrame();
     frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -26,8 +27,7 @@ public class CubeViewer extends JPanel {
     frame.setVisible(true);
   }
 
-  public void showCube(Cube cube) {
-    this.cube = cube;
+  public void showCube() {
     repaint();
   }
 

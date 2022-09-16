@@ -3,16 +3,22 @@ package Cube;
 public enum Rotation {
   R('r'),
   RP('R'),
+  R2('t'),
   L('l'),
   LP('L'),
+  L2('k'),
   U('u'),
   UP('U'),
+  U2('i'),
   D('d'),
   DP('D'),
+  D2('s'),
   F('f'),
   FP('F'),
+  F2('g'),
   B('b'),
-  BP('B');
+  BP('B'),
+  B2('n');
 
   private final char c;
   public char c() {
